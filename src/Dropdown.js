@@ -5,11 +5,13 @@ function Dropdown(props) {
   
   return (
     <div>
+      {/* Added mouseover event for displaying array elements*/}
       <div className="select" onMouseOver={()=>document.getElementById("items").style.display="block"}>
       Select
      
     </div>
-    <div id="items">     
+    <div id="items">   
+    {/* Displaying all array elements */}  
     {
       props.array.map((val, i) =>{
         return <DropdownItem key={i} value={val} />
